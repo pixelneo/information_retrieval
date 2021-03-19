@@ -1,0 +1,16 @@
+Instructions
+============
+
+Go to directory 'source': `cd source`
+Run `make` to install required Python packages and download Morfodita files.
+
+To run the system call command similar (for czech, test topics, ...) to the following:
+
+`./run -q topics-train.xml -d documents_en.lst -r run-0_en -o en_baseline.res -document_path documents_en -data_prefix ~/my_datasets/A1`
+
+where `-document_path` is the folder in which the documents listed in file given to `-d` parameter are (in the file there are only file names),
+and `-data_prefix` is path to data from the archive that was given to us with the assignement.
+
+To remove created files, run `make clean`.
+This however does not remove install Python packages.
+

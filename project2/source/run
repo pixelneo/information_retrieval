@@ -1,0 +1,48 @@
+#!/usr/bin/env python3
+import argparse
+import os
+
+from utils import Args, Funcs
+from retrieval import Retrieval
+from document_parser import DocumentParser
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-q', type=str, default='topics-train_cs.xml', help='Topics list file')
+    parser.add_argument('-d', type=str, default='documents_cs.lst', help='Documents list file')
+    parser.add_argument('-r', type=str, default='run-0_cs', help='Run name')
+    parser.add_argument('-o', type=str, default='cs_baseline.res', help='Output file')
+    parser.add_argument('-document_path', type=str, default='documents_cs', help='Path to folder with documents')
+    parser.add_argument('-data_prefix', type=str, default='A1', help='Prefix to -q -d -document_path arguments (A1 by default)')
+
+    args_inline = parser.parse_args()
+    # all arguments for the run
+    args = Args(args_inline)
+
+    # transform docs and topics
+    try:
+        if not os.path.exists('data.nosync'):
+            os.mkdir('data.nosync')
+        doc_parser = DocumentParser(args)
+        print('Transforming topics ... ')
+        doc_parser.transform_topics()
+        print('Transforming topics (from xml to pickle) DONE')
+        print('Transforming documents ... ')
+        doc_parser.transform_docs()
+        print('Transforming documents (from xml to pickle) DONE')
+    except Exception as e:
+        print('ERROR occured, delete ./data.nosync dir please')
+        raise e
+
+    # perform retrieval
+    try:
+        print('Creating index (if it does not exist already)...')
+        if not os.path.exists('model.nosync'):
+            os.mkdir('model.nosync')
+        retrieval = Retrieval(args)
+        print('Searching ... ')
+        retrieval.search()
+        print('Search DONE')
+    except Exception as e:
+        print('ERROR occured, delete ./model.nosync dir please')
+        raise e

@@ -1,0 +1,29 @@
+{
+    "terms": "forms",
+    "d_term_weight": "n",
+    "d_df_weight": "n",
+    "d_vector_norm": [
+        "c",
+        null,
+        null 
+    ],
+    "del_stops": false,
+    "lowercase_d": false,
+    "rem_punkt": false,
+    "process_numbers": false,
+    "rem_garbage": false,
+    "expand_q": false,
+    "lowercase_q": false,
+    "query_fields": [
+        "title"
+    ],
+    "sim": "c",
+    "q_term_weight": "n",
+    "q_df_weight": "n",
+    "q_vector_norm": [
+        "c",
+        null,
+        null
+    ],
+    "top_k": 1000
+}

@@ -1,0 +1,17 @@
+Build and run instructions
+==========================
+
+- A computer with unix is needed
+- xmllint has to be installed
+
+Build
+=====
+`make build` to install used python3 packages and download morphodita files
+
+Usage
+=====
+`./run -q topics-train_cs.xml -d documents_cs.lst -r run-0_cs -o run-0_train_cs.res -document_path documents_cs`
+
+Note arguments `document_path`, which is the path to the folder containing document files.
+
+

@@ -1,0 +1,14 @@
+{
+    "log": true,
+    "train": false,
+    "data_prefix": "",
+    "document_path": "documents_cs-",
+    "lang": "czech-",
+    "d": "documents_cs.lst-",
+    "q": "topics-train_cs.xml-",
+    "q2": "topics-test_cs.xml-",
+    "path_train_qrels": "qrels-train_cs.txt-",
+    "path_test_qrels": "qrels-test_cs.txt-",
+    "train_folder": "model.nosync",
+    "im_file": "im.pickle"
+}

@@ -1,0 +1,30 @@
+{
+    "terms": "lemmas",
+    "d_term_weight": "L",
+    "d_df_weight": "t",
+    "d_vector_norm": [
+        "u",
+        220,
+        0.23
+    ],
+    "del_stops": true,
+    "lowercase_d": true,
+    "rem_punkt": true,
+    "process_numbers": true,
+    "rem_garbage": false,
+    "expand_q": false,
+    "lowercase_q": true,
+    "query_fields": [
+        "title",
+        "desc"
+    ],
+    "sim": "c",
+    "q_term_weight": "l",
+    "q_df_weight": "t",
+    "q_vector_norm": [
+        "c",
+        null,
+        null
+    ],
+    "top_k": 1000
+}

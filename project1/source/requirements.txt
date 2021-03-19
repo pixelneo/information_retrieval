@@ -1,0 +1,6 @@
+neptune_client==0.4.94
+numpy==1.16.4
+regex==2019.8.19
+matplotlib==3.1.1
+ufal.morphodita==1.9.2.3
+corpy==0.2.3

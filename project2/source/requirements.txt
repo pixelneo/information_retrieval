@@ -1,0 +1,5 @@
+Whoosh==2.7.4
+neptune_client==0.4.94
+numpy==1.16.4
+regex==2019.8.19
+corpy==0.2.3
